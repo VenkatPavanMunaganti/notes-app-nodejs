@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Notes App</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #main-container {
+      background-color: #F0EDEE;
+      width: 700px;
+      margin: 50px auto;
+      border-radius: 5px;
+      box-shadow: 0px 0px 3px #00000047;
+    }
+
+    h1 {
+      padding-top: 40px;
+      text-align: center;
+      color: black;
+    }
+
+    #content-container {
+      padding: 20px;
+    }
+
+    ul li {
+      background-color: #fff;
+      padding: 10px;
+      margin: 10px;
+      list-style: none;
+      border-radius: 5px;
+      box-shadow: 0px 0px 3px #00000047;
+      color: black;
+      font-size: large;
+    }
+
+    li a{
+      float: right;
+    }
+
+    #addform{
+      padding: 40px;
+      margin: 10px auto;
+      width: fit-content;
+      font-size: large;
+    }
+
+    #addform input{
+      margin: 5px 0;
+      padding: 10px;
+    }
+    tr td{
+      padding: 5px;
+    }
+    h2{
+      text-align: center;
+      color: black;
+    }
+    #addform input[type='submit']{
+      background-color: black;
+      color: white;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: large;
+      margin: 5px 0;
+    }
+
+    .important {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="main-container">
+    <h1>MyNotes</h1>
+    <div id="content-container">
+      <ul id="notes">
+        {{notesList}}
+      </ul>
+      <div id="addform">
+        <h2>Add a Note</h2>
+        <form action="/addnote" method="post">
+          <table>
+            <tr>
+              <td><label for="content">Content:</label></td>
+              <td><input type="text" id="content" name="content" required /></td>
+            </tr>
+            <tr>
+              <td><label for="important">Important:</label></td>
+              <td><input type="checkbox" id="important" name="important" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"> <input type="submit" value="Add Note" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

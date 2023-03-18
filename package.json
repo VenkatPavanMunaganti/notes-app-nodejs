@@ -1,0 +1,15 @@
+{
+  "name": "notesapp",
+  "version": "1.0.0",
+  "description": "Sample NodeJS application using core http module",
+  "main": "server.js",
+  "scripts": {
+    "start" : "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavan Munaganti",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
